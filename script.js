@@ -1,10 +1,10 @@
-var checkbox = document.querySelector("input[name=checkbox]");
+var checkbox = document.querySelector(".checkbox");
 
 
 checkbox.addEventListener('change', function() {
   if (this.checked) {
-    console.log("Checkbox is checked..");
+    this.nextSibling.nextElementSibling.style.display = 'flex';
   } else {
-    console.log("Checkbox is not checked..");
+    this.nextSibling.nextElementSibling.style.display = 'none';
   }
 });
