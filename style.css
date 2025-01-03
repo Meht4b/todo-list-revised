@@ -224,6 +224,14 @@ li{
 
 }
 
+@media screen and (max-width: 800px) {
+
+    .navbar{
+        display: none;
+    }
+
+}
+
 #veepn-breach-alert{
     
     display: none;
