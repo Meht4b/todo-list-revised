@@ -1,7 +1,9 @@
 var checkbox = document.querySelectorAll(".checkbox");
 
 function checkboxTick(){
+  console.log(this)
   if (this.checked) {
+
     this.nextSibling.nextElementSibling.style.display = 'flex';
   } else {
     this.nextSibling.nextElementSibling.style.display = 'none';
@@ -45,6 +47,11 @@ function submitFunction(){
         liChild.appendChild(checkboxEl);
         liChild.appendChild(senderMessage);
 
+        const deltaskel = document.createElement('h3');
+        deltaskel.innerHTML = '-';
+        deltaskel.classList.add('deltask');
+        liChild.appendChild(deltaskel)
+
         
         document.getElementById('taskList').appendChild(liChild); 
 
@@ -56,7 +63,10 @@ function submitFunction(){
           }
         })
 
-
+        deltaskel.addEventListener('click',(event)=>{
+          event.target.parentElement.remove();
+  
+        })
         
         /*
         var messageBody = document.querySelector('#messages');
@@ -66,3 +76,13 @@ function submitFunction(){
 
 }
 
+var deleteButtons = document.querySelectorAll('.deltask');
+
+console.log(deleteButtons)
+
+for (i=0;i<deleteButtons.length;i++){
+deleteButtons[i].addEventListener('click',(event)=>{
+  event.target.parentElement.remove();
+  
+})
+}
