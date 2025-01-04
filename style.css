@@ -10,6 +10,8 @@ body {
     padding-bottom: 2.5vh;
     font-family: "Poppins" , Arial, sans-serif;
     background-color: hsl(38, 70%, 95%);
+    background-image: radial-gradient(#FF9494 10%,transparent 10%);
+    background-size: 1rem 1rem;
     display: grid;
     grid-template-columns: 1fr 5fr;
     
@@ -59,7 +61,7 @@ li{
     display: flex;
     
     flex-direction: column;
-    height: 90%;
+    height: 90vh;
     justify-content: space-between;
     background-color: #FFD1D1;
     border-radius: 1px;
@@ -112,8 +114,11 @@ li{
 
 
     border-radius: 2px;
+    position: relative;
 
 }
+
+
 
 .day button{
     transition: 0.2s;
